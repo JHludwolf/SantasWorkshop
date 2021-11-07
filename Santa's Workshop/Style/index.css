@@ -1,0 +1,133 @@
+/*
+José Luis Lobera del Castillo 0224643
+Bases de Datos
+*/
+
+/* * {
+    border: 2px solid red;
+} */
+
+ /* GENERAL */
+ * {
+    font-family: "Raleway", sans-serif;
+    user-select: none;
+}
+
+body {
+    background: rgb(28, 31, 33);
+    margin-inline: 0%;
+    margin-block: 0%;
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+  }
+
+p {
+    user-select: text;
+}
+
+/* INICIO */
+
+#article-cover {
+    margin: -8px -8px;
+    background: rgb(28, 31, 33);
+    background-size: cover;
+    background-image: linear-gradient(to top, rgba(194, 20, 20, 0) 85%, rgb(54, 45, 45)), url("./Resources/jonathan-borba-0ujyQopdUZE-unsplash.jpg");
+    background-repeat: no-repeat;
+    /*filter: blur(8px);*/
+    z-index: 0;
+} 
+
+
+#bg-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    box-shadow: 0 0 0rem 0 rgba(0, 0, 0, .2);
+    background-color: rgba(24, 18, 18, 0.15);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    filter: blur(0);
+  }
+
+#article-main-square__div {
+    height: 57rem;
+    width: 40vw;
+    position: absolute;
+    top: 0rem; /*4rem;*/
+    left: 60%;
+    box-shadow: 0 0 0rem 0 rgba(0, 0, 0, .2);
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 4;
+    filter: blur(0);
+}
+
+#title {
+    background-image: url("./Resources/jonathan-borba-0ujyQopdUZE-unsplash.jpg");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: 115%;
+    background-position-y: 75%;
+    background-repeat: repeat;
+    text-align: right;
+    background-size: 70rem;
+    text-transform: uppercase;
+    font-size: 200px;
+    /**/ font-family: Impact, "Segoe UI", Tahoma, sans-serif; 
+    /* font-family: 'Brush Script MT', cursive; */
+    z-index: 5;
+    margin-top: 0.3em;
+    position: relative;
+    line-height: 0.90em;
+}
+
+.article__subtitle {
+    color: whitesmoke;
+    text-align: right;
+    text-transform: uppercase;
+    z-index: 6;
+}
+
+#college {
+    position: relative;
+    top: 50px;
+}
+
+#semester {
+    position: relative;
+    top: -152px;
+}
+
+article {
+    padding: 8em 5em;
+}
+
+#header-square {
+    height: 4rem;
+    width: 60w;
+    position:fixed;
+    display: block;
+    top: 0;
+    left: 60%;
+    right: 0;
+    box-shadow: 0 0 0rem 0 rgba(0, 0, 0, .2);
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.article-info__p {
+    position: relative;
+    text-align: right;
+    margin: auto 51vh;
+    bottom: 0vh;
+    left: 50vh;
+    font-size: medium;
+    font-weight: 700;
+    color:rgb(199, 207, 214);
+}
