@@ -5,8 +5,8 @@ from faker import Faker
 from dateutil.relativedelta import relativedelta
 
 
-class kid:
-    def __init__(self, name, lastName, birthdate, address, country, goodness, wishlist):
+class Kid:
+    def __init__(self, name, lastName, birthdate, address, country, goodness, wishlist = []):
         self.name = name
         self.lastName = lastName
         self.birthdate = birthdate
@@ -17,7 +17,10 @@ class kid:
 
     def __str__(self):
         return '{name} {lastName}, {birthdate}\n{address}, {country}\n{goodness}, {wishlist}'.format(name = self.name, lastName = self.lastName, birthdate = self.birthdate, address = self.address, country = self.country, goodness = self.goodness, wishlist = self.wishlist)
-
+    
+    def getCSV(self):
+        attributes = [self.name, self.lastName, self.birthdate.strftime(f"%m/%d/%Y"), self.address, self.country, str(self.goodness)]
+        return ','.join(attributes)
 
 #NAME GENERATOR - name, lastName Using names library
 '''
@@ -47,6 +50,7 @@ randomCountryCode = fakers[random.randint(0, len(fakers))-1]
 fake = Faker(randomCountryCode)
 
 address = fake.address()
+address = address.replace('\n','. ')
 country = fake.current_country()
 
 countryLastName = fake.last_name()
@@ -72,6 +76,6 @@ goodness = randomNum if randomNum <= 10 else random.uniform(6.0, 11)
 
 print(goodness)
 
-testKid = kid(countryName, countryLastName, birthdate, address, country, goodness, [])
+testKid = Kid(countryName, countryLastName, birthdate, address, country, goodness, [])
 
-# print(testKid)
+print(testKid.getCSV())
