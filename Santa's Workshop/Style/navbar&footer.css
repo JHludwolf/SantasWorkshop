@@ -2,7 +2,7 @@
 
 .nav {
     height: 5rem;
-    width: 100%;
+    width: 112%;
     display: block;
     justify-content: flex-start;
     z-index: 11;
@@ -19,7 +19,7 @@
     list-style: none;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(5, minmax(0, 12em));
+    grid-template-columns: repeat(5, minmax(0, 10em));
     justify-content: flex-end;
     margin-top: -4rem;
     padding: 1rem 0rem;
@@ -40,7 +40,7 @@
 
 .nav-link:hover {
     color: #2A3234;
-    font-weight: 900;
+    /*font-weight: 900;*/
 }
 
 .header-page-title__div a {
@@ -129,22 +129,4 @@
 
 #contacto p {
     color: #AAAAAA;
-}
-
-/* BOTON DE IDIOMA */
-
-.button-idioma {
-    position: fixed;
-    bottom: 0;
-    background-color: aliceblue;
-    color: #2A3234;
-    border-radius: 0 20px 20px 0;
-    padding: 1rem 1rem;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.button-idioma:hover {
-    background-color: #2A3234;
-    color: aliceblue;
 }
