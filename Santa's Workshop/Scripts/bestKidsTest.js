@@ -45,3 +45,36 @@ function fillData(){
     }
     
 }
+
+function setListeners(){
+    var groupBy = document.getElementById('button-addon2');
+    groupBy.onclick = function () {
+        // Call filtered query
+        var country = document.getElementById('countyInput');
+        alert('Grouping by country: ' + country.value);
+        resetTable();
+        fillData();
+    }
+
+    var bestKids = document.getElementById('inlineRadio1');
+    bestKids.onclick = function () {
+        // Call best kids query
+        alert('Displaying best kids. . .');
+        resetTable();
+        fillData();
+    }
+
+    var worstKids = document.getElementById('inlineRadio2');
+    worstKids.onclick = function () {
+        // Call best kids query
+        alert('Displaying worst kids. . .');
+        resetTable();
+        fillData();
+    }
+}
+
+function resetTable() {
+    var table = document.getElementById('table');
+    var codeBlock = '<table class="table table-striped" style=" margin-top: 10px; background-color: whitesmoke;" id="table">' + '<tr>' + '<th>Name</th>' + '<th>Last name</th>' + '<th>Country</th>' + '<th>Goodness</th>' + '</tr>' + '</table>';
+    table.innerHTML = codeBlock;
+}
